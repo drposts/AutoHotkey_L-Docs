@@ -307,7 +307,7 @@ MsgBox % 0.1 + 0.2 = 0.3   <em>; 0 (not equal)</em>
 <ul>
   <li><strong>Case sensitivity:</strong> None for ASCII characters. For example, <code>CurrentDate</code> is the same as <code>currentdate</code>. However, uppercase non-ASCII characters such as 'Ä' are <em>not</em> considered equal to their lowercase counterparts, regardless of the current user's locale. This helps the script to behave consistently across multiple locales.</li>
   <li><strong>Maximum length:</strong> 253 characters.</li>
-  <li><strong>Allowed characters:</strong> Letters, numbers, non-ASCII characters, and the following symbols: _ # @ $</li>
+  <li><strong>Allowed characters:</strong> Letters, numbers, non-ASCII characters, and the following symbols: _ # @ $ ? [ ]</li>
 </ul>
 <p>Due to style conventions, it is generally better to name your variables using only letters, numbers, and the underscore character (for example: <em>CursorPosition</em>, <em>Total_Items</em>, and <em>entry_is_valid</em>). This style allows people familiar with other computer languages to understand your scripts more easily.</p>
 <p>Although a <a href="#variables">variable</a> name may consist entirely of digits, this is generally used only for <a href="Scripts.htm#cmd_args_old">incoming command line parameters</a>. Such numeric names cannot be used in expressions because they would be seen as numbers rather than variables. It is best to avoid starting a name with a digit, as such names are confusing and will be considered invalid in AutoHotkey v2.</p>
