@@ -136,7 +136,7 @@ returnObject() {
         str .= param . sep
     return SubStr(str, 1, -StrLen(sep))
 }
-MsgBox Join("`n", "one", "two", "three")</pre>
+MsgBox % Join("`n", "one", "two", "three")</pre>
 <p>When a variadic function is called, surplus parameters can be accessed via an object which is stored in the function's final parameter. The first surplus parameter is at <code>params[1]</code>, the second at <code>params[2]</code> and so on. As it is an <a href="objects/Array.htm">array</a>, <code>params.<a href="objects/Array.htm#Length">Length</a></code> can be used to determine the number of parameters.</p>
 <p>Attempting to call a non-variadic function with more parameters than it accepts is considered an error. To permit a function to accept any number of parameters <em>without</em> creating an array to store the surplus parameters, write <code>*</code> as the final parameter (without a parameter name).</p>
 <p class="warning"><strong>Note:</strong> The "variadic" parameter can only appear at the end of the formal parameter list.</p>
@@ -144,7 +144,7 @@ MsgBox Join("`n", "one", "two", "three")</pre>
 <h3 id="VariadicCall">Variadic Function Calls</h3>
 <p>While variadic functions can <i>accept</i> a variable number of parameters, an array of parameters can be passed to <i>any</i> function by applying the same syntax to a function-call:</p>
 <pre>substrings := ["one", "two", "three"]
-MsgBox Join("`n", <b class="blue">substrings*</b>)</pre>
+MsgBox % Join("`n", <b class="blue">substrings*</b>)</pre>
 <p>Notes:</p>
 <ul>
   <li>The object can be an <a href="objects/Array.htm">Array</a> or any other kind of enumerable object (any object with an <a href="Objects.htm#__Enum">__Enum</a> method) or an <a href="objects/Enumerator.htm">enumerator</a>. If the object is not an Array, __Enum is called with a count of 1 and the enumerator is called with only one parameter at a time.</li>
